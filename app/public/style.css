@@ -1,0 +1,13 @@
+#home {
+    background: #efefef url("images/cropland-farm-field-1406864.jpg") no-repeat fixed center; 
+    background-size: cover;
+}
+
+#survey {
+    background: #efefef url("images/adult-backlit-beach-1000445.jpg") no-repeat fixed center; 
+    background-size: cover;
+}
+
+.my-header {
+    background:rgba(239, 239, 239, 0.4)   
+}
