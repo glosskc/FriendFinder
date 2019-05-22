@@ -9,7 +9,7 @@ var people = [
     {
         routeName: "Carmen",
         name: "Carmen",
-        photo: "images/Carmen.jpg",
+        photo: "https://images.pexels.com/photos/1082962/pexels-photo-1082962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         scores: ["5", "2", "4", "3", "4", "5", "5", "2", "1", "4"]
         
     },

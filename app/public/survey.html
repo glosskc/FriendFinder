@@ -32,9 +32,9 @@
         <hr>
         <h3><strong>About You</strong></h3>
         <h4>Name (Required)</h4>
-        <input type="text" id="name" class="form-control" required="">
+        <input type="text" id="user-name" class="form-control" required="">
         <h4>Link to Photo Image (Required)</h4>
-        <input type="text" id="photo" class="form-control" required="">
+        <input type="text" id="user-photo" class="form-control" required="">
         <hr>
     </div>
     <div class="row">
@@ -369,6 +369,16 @@
                 </div>
         </div>
     </div>
+
+     <!-- Submit Button -->
+     <div class="buttons">
+
+            <button type="button" class="submit btn-lg btn-outline-secondary" data-toggle="modal"
+                data-target="#friendModal">Submit</button>
+        </div>
+
+        
+
     <footer class="footer my-4">
             <hr>
             <div class="text-center center-block">
@@ -385,7 +395,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title" id="friendModalLabel">Congratulations <span id="yourName"></span>!</h2>
+                            <h2 class="modal-title" id="friendModalLabel">Congratulations <span id="yourName"></span> Meet Your New Best Friend!</h2>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -417,23 +427,19 @@
         </div>
         <!-- Question 10 -->
 
-        <!-- Submit Button -->
-        <div class="buttons">
-
-            <button type="button" class="submit btn-lg btn-outline-secondary" data-toggle="modal"
-                data-target="#friendModal">Submit</button>
-        </div>
-
-        
-
+       
     
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+   <script type="text/javascript">
+
+
        
        
        $(".submit").on("click", function (event) {
@@ -441,8 +447,8 @@
             var inputName = $("#user-name").val().trim();
             var inputImageUrl = $("#user-photo").val().trim();
             // Check if user input is valid
-            if ((inputName !== "") && (checkImageURL(inputImageUrl))) {
-                // Here we grab the form elements
+            // if ((inputName !== "") && (checkImageURL(inputImageUrl))) {
+            //     // Here we grab the form elements
                 var newFriend = {
                     name: inputName,
                     photo: inputImageUrl,
@@ -460,10 +466,10 @@
                     ]
                 }
                 console.log("newFriend:", JSON.stringify(newFriend));
-            } else {
-                // Pop open the modal dialog
-                $('#alertModal').modal('show')
-            };
+            // } else {
+            //     // Pop open the modal dialog
+            //     $('#alertModal').modal('show')
+            // };
             
             var currentURL = window.location.origin;
             $.post(currentURL + "/api/friends", newFriend, function (data) {
@@ -492,9 +498,9 @@
             });
             return false;
         });
-        function checkImageURL(url) {
-            return (url.match(/\.(jpeg|jpg|gif|png)$/) != null);
-        }
+        // function checkImageURL(url) {
+        //     return (url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+        // }
     </script>
   </body>
 </html>
