@@ -1,4 +1,4 @@
-<!doctype html>
+`<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -380,51 +380,50 @@
         
 
     <footer class="footer my-4">
-            <hr>
-            <div class="text-center center-block">
-                <p><a href="/"><span class="fa fa-home"></span></a> | <a href="/api/friends">API Friends Link</a> | <a href=""
-                        target="_blank">GitHub Repo</a></p>
-    
-    
-    
-            </div>
-            <hr>
-        </footer>
+        <hr>
+        <div class="text-center center-block">
+            <p><a href="/"><span class="fa fa-home"></span></a> | <a href="/api/friends">API Friends Link</a> | <a href=""
+                    target="_blank">GitHub Repo</a></p>
 
-        <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="friendModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="friendModalLabel">Congratulations <span id="yourName"></span> Meet Your New Best Friend!</h2>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <div class="row text-center">
-                                <div class="col-sm-6">
-                                    <div class="circle">
-                                        <img id="yourPicture" class="profile-pic centered-and-cropped" src="">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="circle">
-                                        <img id="friendPicture" class="profile-pic centered-and-cropped" src="">
-                                    </div>
-                                </div>
-        
-                            </div>
-                            <div class="row text-center">
-                                <span id="message"></span>
+
+
+        </div>
+        <hr>
+    </footer>
+
+    <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="friendModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="friendModalLabel">Congratulations <span id="yourName"></span> Meet Your New Best Friend!</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row text-center">
+                        <div class="col-sm-6">
+                            <div class="circle">
+                                <img id="yourPicture" class="profile-pic centered-and-cropped" src="">
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div class="col-sm-6">
+                            <div class="circle">
+                                <img id="friendPicture" class="profile-pic centered-and-cropped" src="">
+                            </div>
                         </div>
+
                     </div>
+                    <div class="row text-center">
+                        <span id="message"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
         <!-- Question 10 -->
 
        
@@ -432,8 +431,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -449,23 +450,23 @@
             // Check if user input is valid
             // if ((inputName !== "") && (checkImageURL(inputImageUrl))) {
             //     // Here we grab the form elements
-                var newFriend = {
-                    name: inputName,
-                    photo: inputImageUrl,
-                    scores: [
-                        $('input[name=q1]:checked').val(),
-                        $('input[name=q2]:checked').val(),
-                        $('input[name=q3]:checked').val(),
-                        $('input[name=q4]:checked').val(),
-                        $('input[name=q5]:checked').val(),
-                        $('input[name=q6]:checked').val(),
-                        $('input[name=q7]:checked').val(),
-                        $('input[name=q8]:checked').val(),
-                        $('input[name=q9]:checked').val(),
-                        $('input[name=q10]:checked').val()
-                    ]
-                }
-                console.log("newFriend:", JSON.stringify(newFriend));
+            var newFriend = {
+                name: inputName,
+                photo: inputImageUrl,
+                scores: [
+                    $('input[name=q1]:checked').val(),
+                    $('input[name=q2]:checked').val(),
+                    $('input[name=q3]:checked').val(),
+                    $('input[name=q4]:checked').val(),
+                    $('input[name=q5]:checked').val(),
+                    $('input[name=q6]:checked').val(),
+                    $('input[name=q7]:checked').val(),
+                    $('input[name=q8]:checked').val(),
+                    $('input[name=q9]:checked').val(),
+                    $('input[name=q10]:checked').val()
+                ]
+            }
+            console.log("newFriend:", JSON.stringify(newFriend));
             // } else {
             //     // Pop open the modal dialog
             //     $('#alertModal').modal('show')
