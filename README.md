@@ -4,4 +4,4 @@ A fun app that demonstrates node JS and Express Sever. Find a new friend by uplo
 Follow the link to see the deployed version: https://salty-beach-80608.herokuapp.com/
 
 
-![Image of FriendFinder](./app/public/images/FriendFinder2.png)
+![Image of FriendFinder](./app/public/images/Friendfinder2.png)
